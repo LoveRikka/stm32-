@@ -1,0 +1,61 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.14.0.0
+Copyright (C) 2015 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: asd asdasd, asdawd, LIC=MJW8T-R35MX-E8HFR-KJFRR-RF783-9LIM7
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Basic (256K)  Version: 5.14.0.0
+Toolchain Path:  D:\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.05 update 1 (build 106)
+Assembler:       Armasm.exe V5.05 update 1 (build 106)
+Linker/Locator:  ArmLink.exe V5.05 update 1 (build 106)
+Library Manager: ArmAr.exe V5.05 update 1 (build 106)
+Hex Converter:   FromElf.exe V5.05 update 1 (build 106)
+CPU DLL:         SARMCM3.DLL V5.14.0.0
+Dialog DLL:      DCM.DLL V1.13.1.0
+Target DLL:      Segger\JL2CM3.dll V2.99.13.0
+Dialog DLL:      TCM.DLL V1.14.4.0
+ 
+<h2>Project:</h2>
+F:\adc_pro\USER\ADC.uvprojx
+Project File Date:  03/20/2020
+
+<h2>Output:</h2>
+Build target 'ADC'
+compiling main.c...
+..\HARDWARE\TIM\tim.h(7): warning:  #1-D: last line of file ends without a newline
+  #endif
+main.c(27): warning:  #223-D: function "TIM2_Init" declared implicitly
+        TIM2_Init();        //初始化定时器
+main.c(40): warning:  #223-D: function "phase_diffrence" declared implicitly
+          delay_us(phase_diffrence());
+main.c: 3 warnings, 0 errors
+compiling adc.c...
+..\HARDWARE\ADC\adc.c(55): warning:  #223-D: function "ADC_ResetCalibration" declared implicitly
+      ADC_ResetCalibration(ADC1);       //使能复位校准  
+..\HARDWARE\ADC\adc.c(57): warning:  #223-D: function "ADC_GetResetCalibrationStatus" declared implicitly
+        while(ADC_GetResetCalibrationStatus(ADC1));     //等待复位校准结束
+..\HARDWARE\ADC\adc.c(59): warning:  #223-D: function "ADC_StartCalibration" declared implicitly
+        ADC_StartCalibration(ADC1);      //开启AD校准
+..\HARDWARE\ADC\adc.c: 3 warnings, 0 errors
+linking...
+..\OBJ\ADC.axf: Error: L6218E: Undefined symbol ADC_GetResetCalibrationStatus (referred from adc.o).
+..\OBJ\ADC.axf: Error: L6218E: Undefined symbol ADC_ResetCalibration (referred from adc.o).
+..\OBJ\ADC.axf: Error: L6218E: Undefined symbol ADC_StartCalibration (referred from adc.o).
+Not enough information to list image symbols.
+Finished: 1 information, 0 warning and 3 error messages.
+"..\OBJ\ADC.axf" - 3 Error(s), 6 Warning(s).
+
+<h2>Collection of Component include folders:</h2>
+  F:\adc_pro\USER\RTE
+  D:\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+Target not created.
+</pre>
+</body>
+</html>
